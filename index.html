@@ -1,0 +1,22 @@
+function deleteChar(i) {
+  data.splice(i, 1);
+  save();
+  render();
+}
+
+toggleBtn.onclick = () => {
+  editor = !editor;
+  addBox.style.display = editor ? 'block' : 'none';
+  render();
+};
+
+render();
+
+// Registrar service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+
+</body>
+</html>
